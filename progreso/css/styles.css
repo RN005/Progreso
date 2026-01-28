@@ -1,0 +1,343 @@
+/* =========================
+   THEME VARIABLES
+========================= */
+
+body.dark {
+  --bg: #0f1115;
+  --card: #1b1f26;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: #2a2f3a;
+  --accent: #4caf50;
+}
+
+body.light {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #1f2933;
+  --muted: #4b5563;
+  --border: #e5e7eb;
+  --accent: #4caf50;
+}
+
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.logo img {
+  width: 48px;
+  height: auto;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search {
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  outline: none;
+}
+
+.search::placeholder {
+  color: var(--muted);
+}
+
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background: var(--card);
+  border-right: 1px solid var(--border);
+  padding: 16px;
+}
+
+.sidebar button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  text-align: left;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.sidebar button:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+#app {
+  margin-left: 220px;
+  padding: 24px;
+}
+
+.page h2 {
+  margin-top: 0;
+}
+
+/* =========================
+   GRID & CARDS
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 16px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* =========================
+   WORK PAGE
+========================= */
+
+input#task {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  margin-bottom: 20px;
+  outline: none;
+}
+
+input#task:focus {
+  border-color: var(--accent);
+}
+
+.timer {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 600;
+  margin: 20px 0;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   BUTTON SYSTEM
+========================= */
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  color: var(--text);
+  background: transparent;
+}
+
+/* Primary buttons */
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(76,175,80,0.35);
+}
+
+/* Secondary buttons */
+.btn-secondary {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.btn-secondary:hover {
+  background: var(--card);
+  color: var(--text);
+}
+
+/* Danger buttons */
+.btn-danger {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.btn-danger:hover {
+  background: #dc2626;
+}
+
+/* Button group spacing */
+.button-group button {
+  margin-right: 8px;
+}
+
+/* =========================
+   ANALYTICS
+========================= */
+
+canvas {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+/* =========================
+   LOCKED STATE
+========================= */
+
+.locked {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  #app {
+    margin-left: 0;
+  }
+
+  .topbar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+/* ===============================
+   FIX: START BUTTON STYLING ONLY
+   (NO SIDE EFFECTS)
+================================ */
+
+/* Dashboard: Start Focus Session */
+button.start-focus-btn {
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.start-focus-btn:hover {
+  background-color: #43a047;
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.35);
+}
+
+/* Work page: Start Timer */
+button.start-timer-btn {
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.start-timer-btn:hover {
+  background-color: #43a047;
+  box-shadow: 0 6px 16px rgba(76, 175, 80, 0.3);
+}
