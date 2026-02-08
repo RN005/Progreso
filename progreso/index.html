@@ -2,41 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Progreso</title>
+
   <link rel="stylesheet" href="css/styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body class="dark">
 
-<header class="topbar">
-  <div class="logo">
-    <img src="assets/icon.svg" />
-    <span>Progreso</span>
-  </div>
+  <header class="topbar">
+    <div class="logo">
+      <img src="assets/icon.svg" />
+      <span>Progreso</span>
+    </div>
 
-  <div class="top-actions">
-    <input class="search" placeholder="Search..." />
-    <button id="themeToggle" class="theme-toggle">🌙</button>
-    <div class="profile">👤</div>
-  </div>
-</header>
+    <div class="top-actions">
+      <input class="search" placeholder="Search..." />
+      <button id="themeToggle" class="theme-toggle">🌙</button>
+      <div class="profile">👤</div>
+    </div>
+  </header>
 
-<nav class="sidebar">
-  <button data-page="dashboard">Dashboard</button>
-  <button data-page="work">Work</button>
-  <button data-page="analytics">Analytics</button>
-  <button data-page="general">General</button>
-</nav>
+  <nav class="sidebar">
+    <button data-page="dashboard">Dashboard</button>
+    <button data-page="work">Work</button>
+    <button data-page="analytics">Analytics</button>
+    <button data-page="general">General</button>
+  </nav>
 
-<main id="app"></main>
+  <!-- Dynamic content loads here -->
+  <main id="app"></main>
 
-<script src="js/state.js"></script>
-<script src="js/dashboard.js"></script>
-<script src="js/work.js"></script>
-<script src="js/analytics.js"></script>
-<script src="js/general.js"></script>
-<script src="js/main.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/work.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/general.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>
