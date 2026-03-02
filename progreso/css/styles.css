@@ -341,3 +341,49 @@ button.start-timer-btn:hover {
   background-color: #43a047;
   box-shadow: 0 6px 16px rgba(76, 175, 80, 0.3);
 }
+/* =========================
+   AUTH MODAL
+========================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-card {
+  background: var(--card);
+  padding: 28px;
+  border-radius: 18px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-card h3 {
+  margin-top: 0;
+}
+
+.modal-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.switch-text {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--muted);
+  cursor: pointer;
+}
